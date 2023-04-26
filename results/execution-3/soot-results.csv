@@ -1,7 +1,7 @@
 project;class;method;merge commit;Confluence Inter;OA Inter;left right DFP-Inter;right left DFP-Inter;left right PDG;right left PDG;Time
 antlr4;org.antlr.v4.codegen.target.Python2Target;python2Keywords;69ff2669eec265e25721dbc27cb00f6c381d0b41;false;false;false;false;false;false;18.20900
 antlr4;org.antlr.v4.codegen.target.Python3Target;python3Keywords;69ff2669eec265e25721dbc27cb00f6c381d0b41;false;false;false;false;false;false;17.88100
-druid;com.metamx.druid.loading.S3SegmentPusher;push(File, DataSegment);05168808c278c080c59c19e858d9471b316cd1f5;false;false;false;false;false;false;649.00400
+druid;com.metamx.druid.loading.S3SegmentPusher;push(File, DataSegment);05168808c278c080c59c19e858d9471b316cd1f5;false;true;false;false;false;false;649.00400
 netty;org.jboss.netty.handler.codec.frame.LengthFieldBasedFrameDecoder;decode(ChannelHandlerContext, Channel, ChannelBuffer);193acdb36cd3da9bfc62dd69c4208dff3f0a2b1b;false;false;false;false;false;true;18.96200
 OpenTripPlanner;org.opentripplanner.routing.spt.MultiShortestPathTree;dominates(State, State);4c506dce43775704919d084f0acfba86d251bf4a;false;false;false;false;true;false;20.94700
 webbit;org.webbitserver.netty.WebSocketClient;adjustPipelineToWebSocket(ChannelHandlerContext, MessageEvent, ChannelHandler, ChannelHandler);74d2d2b87704d003acacb34e4ca8fb5f897b938f;false;false;false;false;false;false;14.98300
@@ -10,7 +10,7 @@ storm;org.apache.storm.kafka.spout.KafkaSpout;open(Map, TopologyContext, SpoutOu
 storm;org.apache.storm.kafka.spout.KafkaSpoutConfig;KafkaSpoutConfig(Builder<K,V>);ad2be678831b3b060229fd936e3908110162b7ac;false;false;false;false;false;false;13.82500
 storm;org.apache.storm.kafka.spout.KafkaSpoutConfig;toString();ad2be678831b3b060229fd936e3908110162b7ac;false;false;false;false;false;false;14.73200
 storm;org.apache.storm.kafka.spout.KafkaSpout;emitTupleIfNotEmitted(ConsumerRecord<K,V>);bd1f5c54752f67b484a83c26667331234234d3a3;false;false;false;false;true;true;14.99100
-swagger-maven-plugin;com.github.kongchen.swagger.docgen.reader.AbstractReader;hasValidAnnotations(List<Annotation>);e825a7fdc6ef688f1253b93d2cb236e710acfc56;false;true;false;false;false;false;15.31100
+swagger-maven-plugin;com.github.kongchen.swagger.docgen.reader.AbstractReader;hasValidAnnotations(List<Annotation>);e825a7fdc6ef688f1253b93d2cb236e710acfc56;false;false;false;false;false;false;15.31100
 jsoup;org.jsoup.helper.HttpConnection;execute(Connection.Request, Response);a8b6982de98ff76ef254031d7152fff57f6bf941;false;false;false;false;false;false;23.51300
 jsoup;org.jsoup.helper.HttpConnection;createConnection(Connection.Request);fee4762322f85a1109edd75ccb67f38cf5008c80;false;false;false;false;false;false;16.23100
 jsoup;org.jsoup.helper.HttpConnection;execute(Connection.Request, Response);3f7d2c71dbbbb289c684f339874eed8ac2747fa0;false;false;false;false;false;true;19.72200
@@ -30,11 +30,11 @@ java-faker;com.github.javafaker.Faker;Faker(Locale, Random);ca42fcfaf45cae1754c5
 swagger-core;io.swagger.jaxrs2.OperationParser;getSchemaFromAnnotation(io.swagger.oas.annotations.media.Schema);e7fea7c4889dbdd6a4e0b2d059c8aa0f126ab1c2;false;false;false;false;false;false;16.25100
 cucumber-jvm;cuke4duke.internal.java.JavaLanguage;load(String);4505c156b6267c1b760deec570ddbfe047b42aa9;false;false;true;false;true;false;14.72200
 dropwizard;io.dropwizard.setup.Bootstrap;Bootstrap(Application<T>);ddd15a681bf42360337844412cae4aba1556eb88;false;false;true;true;false;false;228.55600
-jenkins;jenkins.slaves.DefaultJnlpSlaveReceiver;handle(String, JnlpSlaveHandshake);48b2b951dfb3438999ceda330093cac82b857ce6;true;true;false;false;false;true;43.47100
+jenkins;jenkins.slaves.DefaultJnlpSlaveReceiver;handle(String, JnlpSlaveHandshake);48b2b951dfb3438999ceda330093cac82b857ce6;true;false;false;false;false;true;43.47100
 logback;ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase;start();542843fd04a793fb9e0eea0c84d199e66d7c15af;true;false;false;true;false;true;15.76200
 orientdb;com.orientechnologies.orient.core.Orient;startup();a5ce3bcc0a1d196745c575ad6602019f7a6b86f8;false;false;false;false;false;false;2821.14800
 SimianArmy;com.netflix.simianarmy.basic.janitor.BasicJanitorMonkeyContext;getInstanceJanitor();345ad9513aafff397050d613fa87ad06ddffe99d;false;false;true;true;false;false;15.02600
-SimianArmy;com.netflix.simianarmy.basic.BasicSimianArmyContext;BasicSimianArmyContext(String);c39c19bc6b9231601f6bc7358e638a99adf37e0d;false;true;false;false;false;false;18.95700
+SimianArmy;com.netflix.simianarmy.basic.BasicSimianArmyContext;BasicSimianArmyContext(String);c39c19bc6b9231601f6bc7358e638a99adf37e0d;false;false;false;false;false;false;18.95700
 alluxio;tachyon.hadoop.HdfsFileInputStream;HdfsFileInputStream(TachyonFS, int, Path, Configuration, int);dafe76c90024a915224264b4862b33f40cb8478c;false;false;false;false;false;false;242.29500
 voldemort;voldemort.VoldemortClientShell;VoldemortClientShell(ClientConfig, String, BufferedReader, PrintStream, PrintStream);b30fdfebe30c9b6e37b9fbc3fec0ff74cd19f997;true;true;false;true;false;false;242.35900
 voldemort;voldemort.server.VoldemortConfig;VoldemortConfig(Props);4cc1c145819030c8e2baffe4c92383de14b8d880;true;false;true;true;false;false;32.51600
@@ -70,13 +70,13 @@ elasticsearch;org.elasticsearch.action.support.replication.ReplicationOperationT
 elasticsearch;org.elasticsearch.index.IndexSettings;IndexSettings(IndexMetaData, Settings, Predicate<String>, IndexScopedSettings);d896886973660785aac45275ddb110c1a6babc57;true;false;true;true;false;false;2099.15300
 elasticsearch;org.elasticsearch.action.bulk.TransportShardBulkAction;update(IndexMetaData, BulkShardRequest, IndexShard, long[], VersionType[], Translog.Location, int, BulkItemRequest);d896886973660785aac45275ddb110c1a6babc57;true;false;true;false;true;false;236.30500
 elasticsearch;org.elasticsearch.action.support.replication.TransportReplicationAction;doRun();d896886973660785aac45275ddb110c1a6babc57;false;false;false;false;false;false;56.30800
-elasticsearch;org.elasticsearch.action.support.replication.ReplicationOperation;execute();d896886973660785aac45275ddb110c1a6babc57;true;true;true;true;true;true;54.53400
+elasticsearch;org.elasticsearch.action.support.replication.ReplicationOperation;execute();d896886973660785aac45275ddb110c1a6babc57;true;false;true;true;true;true;54.53400
 elasticsearch;org.elasticsearch.index.engine.InternalEngineTests;testRecoverFromForeignTranslog();d896886973660785aac45275ddb110c1a6babc57;false;false;false;false;false;false;38.60600
 elasticsearch;org.elasticsearch.index.engine.InternalEngine;InternalEngine(EngineConfig);d896886973660785aac45275ddb110c1a6babc57;false;false;false;false;false;false;96.07700
 elasticsearch;org.elasticsearch.action.DocWriteResponse;writeTo(StreamOutput);d896886973660785aac45275ddb110c1a6babc57;false;true;false;false;false;false;53.42200
 elasticsearch;org.elasticsearch.action.DocWriteResponse;readFrom(StreamInput);d896886973660785aac45275ddb110c1a6babc57;false;false;false;false;false;false;53.35700
-elasticsearch;org.elasticsearch.action.DocWriteResponse;toXContent(XContentBuilder, Params);d896886973660785aac45275ddb110c1a6babc57;false;true;true;true;false;false;56.39100
-elasticsearch;org.elasticsearch.cluster.metadata.MetaDataCreateIndexService;createIndex(CreateIndexClusterStateUpdateRequest, ActionListener<ClusterStateUpdateResponse>);d896886973660785aac45275ddb110c1a6babc57;error;timeout;error;error;error;error;53446.78500
+elasticsearch;org.elasticsearch.action.DocWriteResponse;toXContent(XContentBuilder, Params);d896886973660785aac45275ddb110c1a6babc57;false;false;true;true;false;false;56.39100
+elasticsearch;org.elasticsearch.cluster.metadata.MetaDataCreateIndexService;createIndex(CreateIndexClusterStateUpdateRequest, ActionListener<ClusterStateUpdateResponse>);d896886973660785aac45275ddb110c1a6babc57;error;false;error;error;error;error;53446.78500
 elasticsearch;org.elasticsearch.action.update.TransportUpdateAction;shardOperation(UpdateRequest, ActionListener<UpdateResponse>, int);d896886973660785aac45275ddb110c1a6babc57;true;false;true;false;false;false;64.60600
 elasticsearch;org.elasticsearch.action.delete.TransportDeleteAction;executeDeleteRequestOnPrimary(DeleteRequest, IndexShard);d896886973660785aac45275ddb110c1a6babc57;false;false;false;false;false;false;67.26200
 elasticsearch;org.elasticsearch.rest.action.cat.RestNodesAction;getTableWithHeader(RestRequest);3764b3ff800c94293aba0bb0fa18c7df80a764f7;false;false;false;false;false;false;122095.42000
@@ -93,7 +93,7 @@ elasticsearch;org.elasticsearch.index.analysis.KuromojiAnalysisTests;createAnaly
 elasticsearch;org.elasticsearch.index.query.SimpleIndexQueryParserTests;setup();36884807b3cc9d660db4da062275c7fdbec8ba67;false;false;false;false;false;false;28.38000
 fitnesse;fitnesse.testsystems.slim.tables.SlimTableFactoryTest;setUp();4d9ba9d221d879507440feb084fa7521b95111ec;false;false;false;false;false;false;15.12900
 fitnesse;fitnesse.testsystems.slim.tables.SlimTableFactory;SlimTableFactory();4d9ba9d221d879507440feb084fa7521b95111ec;false;false;true;true;false;false;19.43800
-cloud-slang;io.cloudslang.lang.api.SlangImpl;getAllEventTypes();20bac30d9bd76569aa6a4fa1e8261c1a9b5e6f76;false;true;false;false;false;false;12.97400
+cloud-slang;io.cloudslang.lang.api.SlangImpl;getAllEventTypes();20bac30d9bd76569aa6a4fa1e8261c1a9b5e6f76;false;false;false;false;false;false;12.97400
 cloud-slang;io.cloudslang.lang.api.SlangImplTest;ALL_EVENTS_SIZE;20bac30d9bd76569aa6a4fa1e8261c1a9b5e6f76;false;false;false;false;false;false;12.19300
 spring-boot;org.springframework.boot.jta.atomikos.AtomikosProperties;asProperties();6664ce19d6f2388ebd6cf54763f54fdddd226b9a;not-found;not-found;not-found;not-found;not-found;not-found;0.01400
 spring-boot;org.springframework.boot.jta.atomikos.AtomikosPropertiesTests;testProperties();6664ce19d6f2388ebd6cf54763f54fdddd226b9a;not-found;not-found;not-found;not-found;not-found;not-found;0.00100
