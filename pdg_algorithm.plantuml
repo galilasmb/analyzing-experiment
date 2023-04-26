@@ -1,0 +1,27 @@
+@startuml PDGAlgorithm
+
+start
+group merge scenario 
+    :get className;
+    :get entry point method;
+    :get lines changed;
+end group
+
+group soot configuration 
+   :Jimple representation;
+   :callGraph(): SPARK;
+   :setEntryPoints;
+   :use-original-names;
+   :others configs;
+end group
+
+group buildPDG
+    :buildDF;
+    :buildCD;
+    :add def-order edges;
+    :merge edges;
+end group
+:return pdg;
+
+end
+@enduml

@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="org.apache.xmlgraphics" module="batik"/>
+  <dependencies>
+    <dependency>
+        <groupId>org.apache.xmlgraphics</groupId>
+        <artifactId>batik-rasterizer</artifactId>
+        <version>1.14</version>
+    </dependency>
+  </dependencies>
+
+  
+</ivy-module>

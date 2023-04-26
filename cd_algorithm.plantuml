@@ -1,0 +1,41 @@
+@startuml CDAlgorithm
+
+start
+group merge scenario 
+    :get className;
+    :get entry point method;
+    :get lines changed;
+end group
+
+group soot configuration 
+   :Jimple representation;
+   :callGraph(): SPARK;
+   :setEntryPoints;
+   :use-original-names;
+   :others configs;
+end group
+
+group buildCD
+    :traverse method;
+    :body: method.retrieveActiveBody;
+    group UnitGraphNodes
+        :addUniqueStopNode;
+        :addUniqueStartNode;
+        :addEdgeToStart(ENTRY, T);
+        :addEdgeToStop(ENTRY, F);
+    end group
+    :MHGPostDominatorsFinder(unitGraph);
+
+    while (unitgraph?) is (not empty)
+        :dominatorList: getDominators(unit);
+        while (dominatorList?) is (not empty)
+            :addControlDependenceEdge(a, b, type);
+        endwhile (is empty)
+    endwhile (is empty)
+
+end group
+:return cd;
+
+end
+
+@enduml

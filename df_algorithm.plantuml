@@ -1,0 +1,98 @@
+@startuml DFAlgorithm
+
+start
+group merge scenario 
+    :get className;
+    :get entry point method;
+    :get lines changed;
+end group
+
+group soot configuration 
+   :Jimple representation;
+   :callGraph(): SPARK;
+   :setEntryPoints;
+   :use-original-names;
+   :others configs;
+end group
+
+group buildDF
+    :traverse method;
+    :body: method.retrieveActiveBody();
+    :graph: ExceptionalUnitGraph;
+    :defs: SimpleLocalDefs(graph);
+
+    while (body.getUnits?) is (not empty) 
+        
+        switch (unit?)
+            case ( IfStmt )
+                :add edge IfStmt;
+                switch (IfStmt?)
+                    case ( InstanceFieldRef )
+                        :add edge InstanceFieldRef;
+                    case ( ArrayRef ) 
+                        :add edge ArrayRef;
+                    case ( InvokeExpr )
+                        :add edge InvokeExpr;
+                    case ( Local )
+                        :add edge Local;
+                endswitch
+
+            case ( ReturnStmt ) 
+                :add edge ReturnStmt;
+                switch (ReturnStmt?)
+                    case ( InstanceFieldRef )
+                        :add edge InstanceFieldRef;
+                    case ( ArrayRef ) 
+                        :add edge ArrayRef;
+                    case ( InvokeExpr )
+                        :add edge InvokeExpr;
+                    case ( Local )
+                        :add edge Local;
+                endswitch
+            case ( AssignStmt )
+                :add edge AssignStmt;
+                switch (assignStmt?)
+                    case ( InstanceFieldRef )
+                        :add edge InstanceFieldRef;
+                    case ( ArrayRef ) 
+                        :add edge ArrayRef;
+                    case ( InvokeExpr )
+                        :add edge InvokeExpr;
+                    case ( Local )
+                        :add edge Local;
+                endswitch
+                
+            case ( InvokeStmt )
+                :add edge InvokeStmt;
+                if (interprocedural?) then (yes)
+                    switch (InvokeStmt.expression?)
+                        case ( isThisInitStmt )
+                            :add edge defsToThisObject;
+                        case ( isParameterInitStmt ) 
+                            :add edge defsToFormalArgs;
+                        case ( isAssignReturnLocalStmt )
+                            :add edge defsToCallSite;
+                        case ( isReturnStringStmt )
+                            :add edge stringToCallSite;
+                    endswitch
+                else (no)
+    
+                endif
+
+        endswitch
+    
+
+    endwhile
+    ->is empty;
+end group
+
+:return cd;
+
+end
+
+
+
+
+
+
+@enduml
